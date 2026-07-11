@@ -9,6 +9,9 @@ export default defineConfig({
     react(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  server: {
+    proxy: { '/api': 'http://localhost:3001' },
+  },
   test: {
     globals: true,
     environment: 'node',
