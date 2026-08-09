@@ -1,9 +1,15 @@
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import MagneticButton from './MagneticButton'
 
-const links = ['Work', 'Services', 'About', 'Contact']
+const links = [
+  { label: 'Work', href: '/' },
+  { label: 'Services', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/' },
+]
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -17,15 +23,19 @@ function Navbar() {
       transition={shouldReduceMotion ? { duration: 0.2 } : { duration: 0.7, ease: 'easeOut' }}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-black/45 px-3 py-3 backdrop-blur-xl sm:px-6">
-        <a href="#" className="text-sm font-semibold uppercase tracking-[0.42em] text-white/95">
+        <Link to="/" className="text-sm font-semibold uppercase tracking-[0.42em] text-white/95">
           CODE® Official
-        </a>
+        </Link>
 
         <nav className="hidden items-center gap-7 text-sm text-white/70 md:flex">
           {links.map((link) => (
-            <a key={link} href={`#${link.toLowerCase()}`} className="transition-colors duration-300 hover:text-white">
-              {link}
-            </a>
+            <NavLink
+              key={link.label}
+              to={link.href}
+              className={({ isActive }) => `transition-colors duration-300 ${isActive ? 'text-white' : 'hover:text-white'}`}
+            >
+              {link.label}
+            </NavLink>
           ))}
         </nav>
 
@@ -64,17 +74,20 @@ function Navbar() {
               transition={{ duration: 0.25 }}
             >
               {links.map((link, index) => (
-                <motion.a
-                  key={link}
-                  href={`#${link.toLowerCase()}`}
-                  className="border-b border-white/10 pb-3 text-2xl font-medium text-white/80"
+                <motion.div
+                  key={link.label}
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 * index }}
-                  onClick={() => setIsOpen(false)}
                 >
-                  {link}
-                </motion.a>
+                  <Link
+                    to={link.href}
+                    className="block border-b border-white/10 pb-3 text-2xl font-medium text-white/80"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                </motion.div>
               ))}
             </motion.nav>
           </motion.div>
