@@ -5,7 +5,7 @@ import { Link, NavLink } from 'react-router-dom'
 import MagneticButton from './MagneticButton'
 
 const links = [
-  { label: 'Work', href: '/' },
+  { label: 'Work', href: '/work' },
   { label: 'Services', href: '/services' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/' },
