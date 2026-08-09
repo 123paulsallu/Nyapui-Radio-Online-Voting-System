@@ -24,7 +24,7 @@ function Footer() {
       >
         <div className="grid gap-10 lg:grid-cols-[1.3fr_0.7fr_0.7fr]">
           <div className="max-w-xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.42em] text-white/95">CODE</p>
+            <p className="text-sm font-semibold uppercase tracking-[0.42em] text-white/95">CODE® Official</p>
             <p className="mt-4 text-[clamp(1.4rem,3vw,2rem)] font-semibold uppercase leading-[1.02] tracking-[-0.03em] text-white">
               Crafting Our Digital Experience.
             </p>
@@ -74,7 +74,7 @@ function Footer() {
         </div>
 
         <div className="flex flex-col gap-3 border-t border-white/10 pt-6 text-sm text-white/50 sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 CODE — Crafting Our Digital Experience.</p>
+          <p>© 2026 CODE® Official — Crafting Our Digital Experience.</p>
           <div className="flex gap-4">
             <a href="#" className="transition-colors hover:text-white">Privacy</a>
             <a href="#" className="transition-colors hover:text-white">Terms</a>

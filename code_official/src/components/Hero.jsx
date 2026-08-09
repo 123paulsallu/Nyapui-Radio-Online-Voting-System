@@ -7,7 +7,7 @@ function Hero() {
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden px-4 pb-20 pt-28 sm:px-6 lg:px-8">
+    <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden px-4 pb-24 pt-28 sm:px-6 lg:px-8 lg:pb-28 lg:pt-32">
       <SpaceBackground />
 
       <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-[1.08fr_0.92fr]">
@@ -18,7 +18,7 @@ function Hero() {
           transition={shouldReduceMotion ? { duration: 0.2 } : { duration: 0.8, ease: 'easeOut' }}
         >
           <motion.p
-            className="mb-5 text-sm uppercase tracking-[0.42em] text-white/55"
+            className="mb-5 text-[0.72rem] uppercase tracking-[0.42em] text-white/55 sm:text-sm"
             initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.6 }}
@@ -27,7 +27,7 @@ function Hero() {
           </motion.p>
 
           <motion.h1
-            className="text-[clamp(3.1rem,8vw,7.4rem)] font-semibold uppercase leading-[0.9] tracking-[-0.04em] text-white"
+            className="text-[clamp(3.2rem,8.4vw,7.8rem)] font-semibold uppercase leading-[0.88] tracking-[-0.045em] text-white"
             initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.8 }}
@@ -38,7 +38,7 @@ function Hero() {
           </motion.h1>
 
           <motion.p
-            className="mt-6 max-w-2xl text-base leading-8 text-white/70 sm:text-lg"
+            className="mt-6 max-w-2xl text-[1rem] leading-8 text-white/70 sm:text-lg"
             initial={shouldReduceMotion ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.22, duration: 0.7 }}
@@ -52,12 +52,12 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.32, duration: 0.7 }}
           >
-            <MagneticButton className="w-full justify-center px-6 py-3.5 text-[11px] uppercase tracking-[0.3em] sm:w-auto">
+            <MagneticButton className="w-full justify-center px-6 py-3.6 text-[11px] uppercase tracking-[0.3em] sm:w-auto">
               Start a project
               <ArrowRight className="h-4 w-4" />
             </MagneticButton>
 
-            <MagneticButton className="w-full justify-center px-6 py-3.5 text-[11px] uppercase tracking-[0.3em] sm:w-auto">
+            <MagneticButton className="w-full justify-center px-6 py-3.6 text-[11px] uppercase tracking-[0.3em] sm:w-auto">
               Explore our work
               <ArrowUpRight className="h-4 w-4" />
             </MagneticButton>
@@ -73,7 +73,7 @@ function Hero() {
           <div className="absolute inset-10 rounded-full bg-[radial-gradient(circle,rgba(132,145,255,0.2),transparent_72%)] blur-3xl" />
 
           <motion.div
-            className="relative flex h-[300px] w-[300px] items-center justify-center rounded-full border border-white/10 bg-white/[0.03] shadow-[0_0_120px_rgba(255,255,255,0.04)] sm:h-[360px] sm:w-[360px]"
+            className="relative flex h-[300px] w-[300px] items-center justify-center rounded-full border border-white/10 bg-white/[0.03] shadow-[0_0_140px_rgba(255,255,255,0.04)] sm:h-[360px] sm:w-[360px]"
             animate={shouldReduceMotion ? undefined : { rotate: [0, 360] }}
             transition={shouldReduceMotion ? { duration: 0 } : { duration: 28, repeat: Infinity, ease: 'linear' }}
           >
@@ -92,8 +92,8 @@ function Hero() {
               transition={shouldReduceMotion ? { duration: 0 } : { duration: 7, repeat: Infinity, ease: 'easeInOut' }}
             />
 
-            <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/[0.05] text-xs font-semibold uppercase tracking-[0.38em] text-white/90 backdrop-blur">
-              CODE
+            <div className="relative flex h-20 w-20 items-center justify-center rounded-full border border-white/20 bg-white/[0.05] text-[0.56rem] font-semibold uppercase tracking-[0.28em] text-white/90 backdrop-blur">
+              CODE®
             </div>
           </motion.div>
         </motion.div>

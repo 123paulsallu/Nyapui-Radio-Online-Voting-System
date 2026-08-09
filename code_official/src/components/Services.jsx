@@ -21,7 +21,7 @@ function Services() {
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <section ref={ref} className="relative isolate overflow-hidden border-t border-white/10 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+    <section ref={ref} className="relative isolate overflow-hidden border-t border-white/10 px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
       <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] [background-size:70px_70px]" />
       <div className="absolute inset-y-0 left-1/2 hidden w-px -translate-x-1/2 bg-white/10 lg:block" />
 
@@ -32,10 +32,10 @@ function Services() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="mb-4 text-[0.7rem] font-medium uppercase tracking-[0.42em] text-white/55">What we create</p>
-          <h2 className="text-[clamp(2rem,3.6vw,2.8rem)] font-semibold tracking-[-0.03em] text-white">Technology meets creativity.</h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
-            From software and digital products to visual identities and media, CODE brings technology and creativity together under one roof.
+          <p className="mb-4 text-[0.72rem] font-medium uppercase tracking-[0.42em] text-white/55">What we create</p>
+          <h2 className="text-[clamp(2.1rem,3.8vw,2.95rem)] font-semibold tracking-[-0.035em] text-white">Technology meets creativity.</h2>
+          <p className="mt-4 max-w-2xl text-[1rem] leading-8 text-white/65 sm:text-lg">
+            From software and digital products to visual identities and media, CODE® Official brings technology and creativity together under one roof.
           </p>
         </motion.div>
 

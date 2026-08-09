@@ -31,8 +31,8 @@ const projects = [
   {
     number: '04',
     category: 'Branding / Creative',
-    title: 'CODE Brand System',
-    description: 'The visual identity and digital experience behind CODE.',
+    title: 'CODE® Official Brand System',
+    description: 'The visual identity and digital experience behind CODE® Official.',
     image: '/images/code-brand.jpg',
     alt: 'Brand identity system preview',
   },
@@ -44,7 +44,7 @@ function FeaturedWork() {
   const shouldReduceMotion = useReducedMotion()
 
   return (
-    <section ref={ref} className="relative isolate overflow-hidden border-t border-white/10 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
+    <section ref={ref} className="relative isolate overflow-hidden border-t border-white/10 px-4 py-24 sm:px-6 lg:px-8 lg:py-36">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(102,122,255,0.08),transparent_55%)]" />
 
       <div className="relative mx-auto flex max-w-7xl flex-col gap-12">
@@ -54,9 +54,9 @@ function FeaturedWork() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="mb-4 text-[0.7rem] font-medium uppercase tracking-[0.42em] text-white/55">Selected work</p>
-          <h2 className="text-[clamp(2rem,3.5vw,2.8rem)] font-semibold tracking-[-0.03em] text-white">Ideas we&apos;ve turned into experiences.</h2>
-          <p className="mt-4 max-w-2xl text-base leading-8 text-white/65 sm:text-lg">
+          <p className="mb-4 text-[0.72rem] font-medium uppercase tracking-[0.42em] text-white/55">Selected work</p>
+          <h2 className="text-[clamp(2.1rem,3.8vw,2.95rem)] font-semibold tracking-[-0.035em] text-white">Ideas we&apos;ve turned into experiences.</h2>
+          <p className="mt-4 max-w-2xl text-[1rem] leading-8 text-white/65 sm:text-lg">
             A selection of digital products, platforms, brands and creative projects we&apos;ve helped bring to life.
           </p>
         </motion.div>

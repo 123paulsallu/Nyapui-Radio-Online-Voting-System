@@ -29,7 +29,7 @@ function CTA() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
           transition={{ delay: 0.08, duration: 0.6 }}
         >
-          Launch with CODE
+          Launch with CODE® Official
         </motion.p>
 
         <motion.h2
@@ -49,7 +49,7 @@ function CTA() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
           transition={{ delay: 0.16, duration: 0.7 }}
         >
-          From the first idea to the final experience, CODE turns ambitious ideas into digital reality.
+          From the first idea to the final experience, CODE® Official turns ambitious ideas into digital reality.
         </motion.p>
 
         <motion.div

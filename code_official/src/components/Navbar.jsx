@@ -18,7 +18,7 @@ function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-black/45 px-3 py-3 backdrop-blur-xl sm:px-6">
         <a href="#" className="text-sm font-semibold uppercase tracking-[0.42em] text-white/95">
-          CODE
+          CODE® Official
         </a>
 
         <nav className="hidden items-center gap-7 text-sm text-white/70 md:flex">

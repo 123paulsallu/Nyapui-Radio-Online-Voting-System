@@ -24,14 +24,14 @@ function About() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
           transition={{ duration: 0.7 }}
         >
-          <p className="mb-4 text-[0.7rem] font-medium uppercase tracking-[0.42em] text-white/55">About CODE</p>
+          <p className="mb-4 text-[0.7rem] font-medium uppercase tracking-[0.42em] text-white/55">About CODE® Official</p>
           <h2 className="text-[clamp(2.1rem,4vw,3.3rem)] font-semibold uppercase leading-[0.95] tracking-[-0.03em] text-white">
             WE BUILD
             <br />
             WHAT&apos;S NEXT.
           </h2>
           <p className="mt-6 text-base leading-8 text-white/65 sm:text-lg">
-            CODE is a technology and creative digital solutions company helping businesses, startups and institutions transform ideas into meaningful digital experiences.
+            CODE® Official is a technology and creative digital solutions company helping businesses, startups and institutions transform ideas into meaningful digital experiences.
           </p>
           <p className="mt-5 text-base leading-8 text-white/65 sm:text-lg">
             From software and digital platforms to visual identities, photography and video, we bring engineering and creativity together to solve problems, tell stories and create experiences that move people.
