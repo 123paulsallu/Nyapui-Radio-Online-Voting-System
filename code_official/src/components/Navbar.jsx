@@ -6,7 +6,7 @@ import MagneticButton from './MagneticButton'
 
 const links = [
   { label: 'Work', href: '/' },
-  { label: 'Services', href: '/' },
+  { label: 'Services', href: '/services' },
   { label: 'About', href: '/about' },
   { label: 'Contact', href: '/' },
 ]
