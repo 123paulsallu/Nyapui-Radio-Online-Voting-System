@@ -1,7 +1,7 @@
-import { Check } from 'lucide-react'
 import { motion } from 'framer-motion'
+import { Check } from 'lucide-react'
 
-const projectOptions = [
+const options = [
   'Website',
   'Web Application',
   'Mobile Application',
@@ -14,12 +14,18 @@ const projectOptions = [
   'Other',
 ]
 
-function ProjectTypes({ selectedTypes, onToggle }) {
+function ProjectTypes({ selectedTypes, onToggleType }) {
   return (
-    <section className="rounded-[1.8rem] border border-white/10 bg-white/[0.02] p-5 backdrop-blur-xl sm:p-6">
-      <p className="text-[0.68rem] font-medium uppercase tracking-[0.38em] text-white/55">What are you looking to build?</p>
-      <div className="mt-5 grid gap-3 sm:grid-cols-2">
-        {projectOptions.map((option) => {
+    <div className="rounded-[1.8rem] border border-white/10 bg-white/[0.02] p-5 backdrop-blur-xl sm:p-6">
+      <p className="text-[0.72rem] font-medium uppercase tracking-[0.42em] text-white/55">What are you looking to build?</p>
+      <h2 className="mt-5 text-[clamp(1.8rem,3vw,2.8rem)] font-semibold uppercase leading-[0.96] tracking-[-0.04em] text-white">
+        WHAT ARE YOU
+        <br />
+        LOOKING TO BUILD?
+      </h2>
+
+      <div className="mt-6 grid gap-3 sm:grid-cols-2">
+        {options.map((option) => {
           const isSelected = selectedTypes.includes(option)
 
           return (
@@ -27,28 +33,22 @@ function ProjectTypes({ selectedTypes, onToggle }) {
               key={option}
               type="button"
               whileTap={{ scale: 0.98 }}
-              onClick={() => onToggle(option)}
-              className={`relative flex items-center justify-between rounded-[1rem] border px-3.5 py-3.5 text-left transition-all duration-300 ${
+              onClick={() => onToggleType(option)}
+              className={`group relative flex items-center justify-between rounded-[1rem] border px-3 py-3 text-left text-[0.66rem] font-medium uppercase tracking-[0.22em] transition-all duration-300 ${
                 isSelected
-                  ? 'border-white/25 bg-white/7 text-white shadow-[0_0_28px_rgba(148,163,184,0.12)]'
-                  : 'border-white/10 bg-black/15 text-white/70 hover:border-white/20 hover:text-white/90'
+                  ? 'border-white/20 bg-white/10 text-white shadow-[0_0_24px_rgba(148,163,184,0.12)]'
+                  : 'border-white/10 bg-transparent text-white/60 hover:border-white/20 hover:text-white/80'
               }`}
             >
-              <span className="text-[0.62rem] font-medium uppercase tracking-[0.28em]">{option}</span>
-              <span
-                className={`flex h-5 w-5 items-center justify-center rounded-full border text-[10px] ${
-                  isSelected
-                    ? 'border-white/30 bg-white/10 text-white'
-                    : 'border-white/15 bg-transparent text-transparent'
-                }`}
-              >
+              <span>{option}</span>
+              <span className={`flex h-5 w-5 items-center justify-center rounded-full border transition-all duration-300 ${isSelected ? 'border-white/30 bg-white/10 text-white' : 'border-white/15 text-transparent'}`}>
                 <Check className="h-3 w-3" />
               </span>
             </motion.button>
           )
         })}
       </div>
-    </section>
+    </div>
   )
 }
 

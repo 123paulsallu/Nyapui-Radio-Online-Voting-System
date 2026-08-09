@@ -5,10 +5,11 @@ import { Link, NavLink } from 'react-router-dom'
 import MagneticButton from './MagneticButton'
 
 const links = [
-  { label: 'Work', href: '/work' },
-  { label: 'Services', href: '/services' },
+  { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Contact', href: '/' },
+  { label: 'Services', href: '/services' },
+  { label: 'Work', href: '/work' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 function Navbar() {
@@ -40,10 +41,12 @@ function Navbar() {
         </nav>
 
         <div className="hidden md:flex">
-          <MagneticButton className="px-4 py-2.5 text-[11px] uppercase tracking-[0.28em]">
-            Let&apos;s Talk
-            <ArrowRight className="h-4 w-4" />
-          </MagneticButton>
+          <Link to="/contact">
+            <MagneticButton className="px-4 py-2.5 text-[11px] uppercase tracking-[0.28em]">
+              Start a Project
+              <ArrowRight className="h-4 w-4" />
+            </MagneticButton>
+          </Link>
         </div>
 
         <button
@@ -89,6 +92,15 @@ function Navbar() {
                   </Link>
                 </motion.div>
               ))}
+
+              <Link
+                to="/contact"
+                className="mt-3 inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-3 text-[0.62rem] uppercase tracking-[0.28em] text-white"
+                onClick={() => setIsOpen(false)}
+              >
+                Start a Project
+                <ArrowRight className="h-4 w-4" />
+              </Link>
             </motion.nav>
           </motion.div>
         )}
