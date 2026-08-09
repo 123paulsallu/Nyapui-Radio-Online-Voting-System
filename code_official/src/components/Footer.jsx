@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import PeopleShadow from './PeopleShadow'
 
 const exploreLinks = ['Home', 'About', 'Services', 'Work', 'Contact']
 const serviceLinks = ['Software Development', 'Web Development', 'Mobile Applications', 'UI/UX Design', 'Branding', 'Photography', 'Videography', 'Digital Media']
@@ -15,6 +16,9 @@ function Footer() {
     <footer ref={ref} className="relative isolate overflow-hidden border-t border-white/10 px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(120,135,255,0.08),transparent_45%)]" />
       <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:70px_70px]" />
+      <div className="absolute bottom-[-10%] left-[-2%] hidden h-[260px] w-[220px] lg:block">
+        <PeopleShadow className="h-full w-full" variant="soft" />
+      </div>
 
       <motion.div
         className="relative mx-auto flex max-w-7xl flex-col gap-12"

@@ -2,6 +2,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Compass, PenTool, Rocket, Sparkles } from 'lucide-react'
+import PeopleShadow from './PeopleShadow'
 
 const stages = [
   { number: '01', title: 'Discover', description: 'Understand the idea, challenge and opportunity.', icon: Compass },
@@ -18,6 +19,9 @@ function Process() {
   return (
     <section ref={ref} className="relative isolate overflow-hidden border-t border-white/10 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(120,135,255,0.07),transparent_40%)]" />
+      <div className="absolute right-[-2%] top-[6%] hidden h-[260px] w-[220px] lg:block">
+        <PeopleShadow className="h-full w-full" variant="soft" />
+      </div>
 
       <div className="relative mx-auto max-w-7xl">
         <motion.div

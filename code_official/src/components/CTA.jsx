@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ArrowRight } from 'lucide-react'
 import MagneticButton from './MagneticButton'
+import PeopleShadow from './PeopleShadow'
 
 function CTA() {
   const ref = useRef(null)
@@ -13,6 +14,9 @@ function CTA() {
     <section ref={ref} className="relative isolate overflow-hidden border-t border-white/10 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(120,135,255,0.14),transparent_45%)]" />
       <div className="absolute inset-0 opacity-40 [background-image:linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:70px_70px]" />
+      <div className="absolute bottom-[-6%] right-[-3%] hidden h-[280px] w-[220px] lg:block">
+        <PeopleShadow className="h-full w-full" variant="soft" />
+      </div>
 
       <motion.div
         className="relative mx-auto flex max-w-7xl flex-col items-start rounded-[2rem] border border-white/10 bg-white/[0.03] px-6 py-12 backdrop-blur-xl sm:px-10 lg:px-16 lg:py-16"

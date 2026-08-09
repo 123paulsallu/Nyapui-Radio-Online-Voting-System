@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import PeopleShadow from './PeopleShadow'
 
 const stats = [
   { value: '10+', label: 'Projects' },
@@ -16,6 +17,9 @@ function About() {
   return (
     <section ref={ref} className="relative isolate overflow-hidden border-t border-white/10 px-4 py-24 sm:px-6 lg:px-8 lg:py-32">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(120,135,255,0.08),transparent_24%),radial-gradient(circle_at_80%_20%,rgba(255,255,255,0.04),transparent_20%)]" />
+      <div className="absolute bottom-[-6%] left-[-4%] hidden h-[320px] w-[260px] lg:block">
+        <PeopleShadow className="h-full w-full" variant="soft" />
+      </div>
 
       <div className="relative mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.02fr_0.98fr] lg:gap-16">
         <motion.div
