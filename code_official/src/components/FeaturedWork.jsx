@@ -28,14 +28,7 @@ const projects = [
     image: '/images/etu-elibrary.jpg',
     alt: 'Educational platform preview',
   },
-  {
-    number: '04',
-    category: 'Branding / Creative',
-    title: 'CODE® Official Brand System',
-    description: 'The visual identity and digital experience behind CODE® Official.',
-    image: '/images/code-brand.jpg',
-    alt: 'Brand identity system preview',
-  },
+ 
 ]
 
 function FeaturedWork() {
@@ -55,7 +48,7 @@ function FeaturedWork() {
           transition={{ duration: 0.7 }}
         >
           <p className="mb-4 text-[0.72rem] font-medium uppercase tracking-[0.42em] text-white/55">Selected work</p>
-          <h2 className="text-[clamp(2.1rem,3.8vw,2.95rem)] font-semibold tracking-[-0.035em] text-white">Ideas we&apos;ve turned into experiences.</h2>
+          <h2 className="text-[clamp(2.1rem,3.8vw,2.95rem)] font-semibold tracking-[-0.035em] text-white">Ideas we have turned into experiences.</h2>
           <p className="mt-4 max-w-2xl text-[1rem] leading-8 text-white/65 sm:text-lg">
             A selection of digital products, platforms, brands and creative projects we&apos;ve helped bring to life.
           </p>

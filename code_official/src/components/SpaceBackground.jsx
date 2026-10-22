@@ -1,4 +1,9 @@
 import { motion, useReducedMotion } from 'framer-motion'
+import reactLogo from '../assets/react.svg'
+import viteLogo from '../assets/vite.svg'
+import figmaLogo from '../assets/Figma.jpg'
+import dockerLogo from '../assets/Docker Logo [Software].jpg'
+import vscodeLogo from '../assets/Visual Studio Code logo in vector format - Brandlogos_net.jpg'
 
 const stars = [
   { id: 1, top: '12%', left: '12%', size: '2px', delay: 0 },
@@ -13,6 +18,14 @@ const orbitals = [
   { id: 1, className: 'absolute inset-8 rounded-full border border-white/10' },
   { id: 2, className: 'absolute inset-16 rounded-full border border-white/[0.08]' },
   { id: 3, className: 'absolute inset-24 rounded-full border border-white/[0.06]' },
+]
+
+const toolDroplets = [
+  { id: 'react', src: reactLogo, alt: 'React', top: '14%', left: '10%', size: 78, rotate: -18, opacity: 0.7 },
+  { id: 'vite', src: viteLogo, alt: 'Vite', top: '72%', left: '16%', size: 64, rotate: 16, opacity: 0.7 },
+  { id: 'docker', src: dockerLogo, alt: 'Docker', top: '18%', left: '82%', size: 70, rotate: 20, opacity: 0.75 },
+  { id: 'figma', src: figmaLogo, alt: 'Figma', top: '60%', left: '79%', size: 72, rotate: -16, opacity: 0.72 },
+  { id: 'vscode', src: vscodeLogo, alt: 'VS Code', top: '42%', left: '86%', size: 58, rotate: 12, opacity: 0.66 },
 ]
 
 function SpaceBackground() {
@@ -42,6 +55,30 @@ function SpaceBackground() {
             className={orbital.className}
             animate={shouldReduceMotion ? undefined : { rotate: 360 }}
             transition={shouldReduceMotion ? { duration: 0 } : { duration: 24 + orbital.id * 6, repeat: Infinity, ease: 'linear' }}
+          />
+        ))}
+      </div>
+
+      <div className="absolute inset-0">
+        {toolDroplets.map((droplet) => (
+          <motion.img
+            key={droplet.id}
+            src={droplet.src}
+            alt={droplet.alt}
+            className="absolute object-contain opacity-80 mix-blend-screen"
+            style={{
+              top: droplet.top,
+              left: droplet.left,
+              width: `${droplet.size}px`,
+              height: `${droplet.size}px`,
+              opacity: droplet.opacity,
+              rotate: `${droplet.rotate}deg`,
+              borderRadius: '42% 58% 59% 41% / 40% 41% 59% 60%',
+              filter: 'drop-shadow(0 20px 26px rgba(16, 24, 40, 0.45))',
+              background: 'transparent',
+            }}
+            animate={shouldReduceMotion ? undefined : { y: [0, -12, 0], x: [0, 4, 0], rotate: [droplet.rotate, droplet.rotate + 5, droplet.rotate] }}
+            transition={shouldReduceMotion ? { duration: 0 } : { duration: 9 + droplet.size / 18, repeat: Infinity, ease: 'easeInOut' }}
           />
         ))}
       </div>

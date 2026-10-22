@@ -1,6 +1,7 @@
 import { motion, useReducedMotion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import logoImage from '../assets/logo.png'
 import PeopleShadow from './PeopleShadow'
 
 const exploreLinks = ['Home', 'About', 'Services', 'Work', 'Contact']
@@ -28,7 +29,10 @@ function Footer() {
       >
         <div className="grid gap-10 lg:grid-cols-[1.3fr_0.7fr_0.7fr]">
           <div className="max-w-xl">
-            <p className="text-sm font-semibold uppercase tracking-[0.42em] text-white/95">CODE® Official</p>
+            <div className="flex items-center gap-3">
+              <img src={logoImage} alt="CODE Official logo" className="h-10 w-auto" />
+              <p className="text-sm font-semibold uppercase tracking-[0.42em] text-white/95">CODE® Official</p>
+            </div>
             <p className="mt-4 text-[clamp(1.4rem,3vw,2rem)] font-semibold uppercase leading-[1.02] tracking-[-0.03em] text-white">
               Crafting Our Digital Experience.
             </p>

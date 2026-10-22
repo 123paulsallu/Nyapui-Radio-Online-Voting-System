@@ -77,32 +77,7 @@ export const projects = [
       '/projects/etu-elibrary.jpg',
     ],
   },
-  {
-    id: 4,
-    slug: 'code-brand-system',
-    title: 'CODE Brand System',
-    category: 'Branding',
-    type: 'Brand Identity',
-    year: '2026',
-    description:
-      'The visual identity and digital experience created for CODE.',
-    image: '/projects/code-brand.jpg',
-    technologies: ['Branding', 'Identity', 'Design'],
-    featured: false,
-    challenge:
-      'CODE needed a visual system that could communicate innovation, clarity and creative depth without becoming generic or overly loud.',
-    approach:
-      'We developed a premium identity rooted in simplicity, atmosphere and digital precision, then extended it into the website experience.',
-    solution:
-      'A refined brand language of typography, contrast, motion and structure that feels credible, modern and memorable.',
-    outcome:
-      'A cohesive identity that connects the studio’s positioning with the digital experiences it builds.',
-    gallery: [
-      '/projects/code-brand.jpg',
-      '/projects/code-brand.jpg',
-      '/projects/code-brand.jpg',
-    ],
-  },
+  
   {
     id: 5,
     slug: 'nyapui-school',

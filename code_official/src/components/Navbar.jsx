@@ -2,6 +2,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { ArrowRight, Menu, X } from 'lucide-react'
 import { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import logoImage from '../assets/logo.png'
 import MagneticButton from './MagneticButton'
 
 const links = [
@@ -24,8 +25,9 @@ function Navbar() {
       transition={shouldReduceMotion ? { duration: 0.2 } : { duration: 0.7, ease: 'easeOut' }}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-white/10 bg-black/45 px-3 py-3 backdrop-blur-xl sm:px-6">
-        <Link to="/" className="text-sm font-semibold uppercase tracking-[0.42em] text-white/95">
-          CODE® Official
+        <Link to="/" className="flex items-center gap-3 text-white/95">
+          <img src={logoImage} alt="CODE Official logo" className="h-9 w-auto" />
+          <span className="text-[10px] font-semibold uppercase tracking-[0.34em] sm:text-xs">CODE®</span>
         </Link>
 
         <nav className="hidden items-center gap-7 text-sm text-white/70 md:flex">
