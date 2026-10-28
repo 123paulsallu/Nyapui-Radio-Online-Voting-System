@@ -33,7 +33,7 @@ async function parse(response) {
 export function getJSON(path) {
   return fetch(`${API_URL}${path}`, {
     headers: { Accept: "application/json" },
-    credentials: "same-origin",
+    credentials: "include",
   }).then(parse);
 }
 
@@ -44,7 +44,7 @@ export function postJSON(path, body) {
       "Content-Type": "application/json",
       Accept: "application/json",
     },
-    credentials: "same-origin",
+    credentials: "include",
     body: JSON.stringify(body),
   }).then(parse);
 }

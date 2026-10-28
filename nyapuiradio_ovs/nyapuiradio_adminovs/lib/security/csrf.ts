@@ -5,6 +5,15 @@ export function isTrustedOrigin(request: Request): boolean {
   const origin = request.headers.get("origin");
   if (!origin || origin === "null") return true;
 
+  const publicAppOrigin = process.env.PUBLIC_APP_ORIGIN;
+  if (publicAppOrigin) {
+    try {
+      if (new URL(origin).origin === new URL(publicAppOrigin).origin) return true;
+    } catch {
+      return false;
+    }
+  }
+
   let originHost: string;
   try {
     originHost = new URL(origin).host;

@@ -9,7 +9,7 @@ const globalForDb = globalThis as unknown as {
 const client =
   globalForDb.sqlClient ??
   postgres(process.env.DATABASE_URL!, {
-    max: 10,
+    max: 1,
     prepare: false,
   });
 
